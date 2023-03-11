@@ -10,6 +10,7 @@ function descendingOrder(n){
     return Number(arr)
 }
 
+
 console.log(descendingOrder(42145))
 console.log(descendingOrder(145263))
 console.log(descendingOrder(123456789))
