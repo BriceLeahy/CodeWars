@@ -9,26 +9,26 @@
 //E:20 input (3,5,6,9,10,12,15,18) return 
 //P:
 function multiplesOf(num){
- //check for neg num
+ let sum = []
+    //check for neg num
  if(num >= -1){
     //count from 3 to number
     for(let i = 3; i < num; i++){
         //if multiple of 3 and 5 display num
         if(i % 3 === 0 && i % 5 === 0){
-          console.log(i)
+          sum.push(i)
         //if multiple of 3 display num  
         } else if(i % 3 === 0){
-          console.log(i)
+          sum.push(i)
         //if multiple of 5 display num  
         } else if(i % 5 === 0){
-          console.log(i)
+          sum.push(i)
         } 
     }
  } else {
-    console.log(0)
+    sum.push(0)
  }
-
+ return sum.reduce((acc, el) => acc + el,0)
 }
-multiplesOf(20) //20 (3,5,6,9,10,12,15,18)
+multiplesOf(10) //20 (3,5,6,9,10,12,15,18)
 multiplesOf(-3) // (0)
-//displayed the numbers, like fizzbuzz. Need to display the sum instead.
