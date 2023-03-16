@@ -21,7 +21,7 @@
 //P: straight forward
 //R: return 
 //E: see below  
-//P:
+//P:d
 
 function getMiddle(s){
   //get middle character index
