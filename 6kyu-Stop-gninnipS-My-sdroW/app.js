@@ -3,18 +3,12 @@
 //Examples:
 
 function spinWords(str){
+    //convert string to array of words
     let newArr = str.split(' ')
-    newArr.map(el => {
-       if(el.length >= 5){
-        let reverseStr = ''
-        for(let i = str.length - 1; i >= 0; i--){
-
-        }
-       }  
-    })
+    //search array for words of 5 letters or more and reverse
+    let answer = newArr.map(el => el.length < 5 ? el : el.split('').reverse().join(''))
+    return answer.join(' ')
 }
-    console.log(newStr)
-
 
 
 spinWords( "Hey fellow warriors" ) // => returns "Hey wollef sroirraw" 
