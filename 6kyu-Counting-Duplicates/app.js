@@ -12,15 +12,20 @@
 
 function duplicateCount(text){
  //empty array
- let numberOfTimesArray = []
+ let emptyArray = []
+ //convert input string to an array
+ let inputArray = text.split('')
+ //loop through both arrays 
+ for(let i = 0; i < inputArray.length; i++){
+    for(let j = 0; j < emptyArray.length; j++){
+       //check if empty array contains inputArr letter once
+        if()
+    }
+ }
 
- //convert string to array
- let textArray = text.split('')
- 
- //if array does not include letter then push to array
- let answerArray = textArray.filter(letter => !numberOfTimesArray.indexOf(letter) === -1)
  //array length equals answer
  console.log(answerArray)
 }
 
 duplicateCount('aabbcde') // 2
+//duplicateCount('aabBcde')
