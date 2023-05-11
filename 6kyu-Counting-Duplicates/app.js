@@ -11,20 +11,24 @@
 // "ABBA" -> 2 # 'A' and 'B' each occur twice
 
 function duplicateCount(text){
- //empty array
- let emptyArray = []
- //convert input string to an array
- let inputArray = text.split('')
- //loop through both arrays 
- for(let i = 0; i < inputArray.length; i++){
-    for(let j = 0; j < emptyArray.length; j++){
-       //check if empty array contains inputArr letter once
-        if()
-    }
- }
+    let obj = {}
+    let count = 0
 
- //array length equals answer
- console.log(answerArray)
+    for(let i of text){
+        i = i.toLowerCase()
+        if(!obj[i]){
+            obj[i] = 1
+        } else {
+            obj[i]++
+        }
+    }
+
+    for(let j in obj){
+        if(obj[j] > 1){
+            count++
+        }
+    }
+    return count
 }
 
 duplicateCount('aabbcde') // 2
