@@ -7,10 +7,20 @@
 // "(( @"     =>  "))((" 
 
 function duplicateEncode(word){
-    
+ let uniqueLetter = ''
+ word = word.toLowerCase()
+
+ for(let i = 0; i < word.length; i++){
+    if(word.lastIndexOf(word[i]) == word.indexOf(word[i])){
+        uniqueLetter += '('
+    } else {
+        uniqueLetter += ')'
+    }
+ }
+ console.log(uniqueLetter)
 }
 
-duplicateEncode("din") // "((("
-//duplicateEncode("recede")
-//duplicateEncode("Success")
-//duplicateEncode("(( @")
+//duplicateEncode("din") // "((("
+//duplicateEncode("recede") // "()()()"
+duplicateEncode("Success") // ")())())"
+//duplicateEncode("(( @") // "))((" 
